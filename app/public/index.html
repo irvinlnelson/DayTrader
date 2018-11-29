@@ -8,20 +8,23 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <script src="js/all.js"></script>
 
     <style>
         .jumbotron {
             color: white;
-            background-image: url("http://www.trade.education/wp-content/uploads/stock-charts.jpg");
+            background-image: url("https://www.theindianwire.com/wp-content/uploads/2018/10/Stock-Market.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 100vh;
+            height: 50vh;
         }
 
         .lead {
 
             font-size: 150px;
+            font-family: 'IBM Plex Mono', monospace;
         }
     </style>
 
@@ -33,6 +36,10 @@
             $(".jumbotron").css({ height: $(window).height() + "px" });
         });
 
+        $('.carousel').carousel({
+            interval: 2000
+        })
+
     </script>
 
 </head>
@@ -41,21 +48,50 @@
     <div class="jumbotron">
         <!--Search Bar-->
         <form class="form-inline justify-content-center" method="GET" action="">
-        
-        <!--NEXT TWO LINES HAVE IDS FOR AJAX CALLS AND ALL API-->
+
+            <!--NEXT TWO LINES HAVE IDS FOR AJAX CALLS AND ALL API-->
 
             <input id="tickerSearch" class="form-control mr-sm-2" name="query" type="text" placeholder="AAPL, IBM, FB etc.">
-            <button id="tickerBtn" class="btn btn-outline-success  my-2 my-sm-0"  type="submit">Get Stock</button>
+            <button id="tickerBtn" class="btn btn-outline-success  my-2 my-sm-0" type="submit">Get Stock</button>
         </form>
         <p class="lead">Daytrader</p>
-        
-        <hr class="my-4">
+</div>
+<div class="card-deck">
+        <div class="card">
+          
+          <div class="card-body">
+            <h3 class="card-title" id="card1Title"></h3>
+            <p class="card-text" id="card1Detail"></p>
+            <p class="card-text" id="card1Comp"></p>
+            <p class="card-text"><small class="text-muted update"></small></p>
+          </div>
+        </div>
+        <div class="card">
+          
+          <div class="card-body">
+            <h1 class="card-title price"id="card2Title"></h1>
+            <p class="card-text">Daytrader, LLC.&trade; score: </p>
+            <h1 class="dtScore">65</h1>
+            <p class="card-text"><small class="text-muted update"></small></p>
+          </div>
+        </div>
+        <div class="card">
+          
+          <div class="card-body">
+            <h3 class="card-title price" id="card3Title"></h3>
+            <p class="card-text"></p>
+            <p class="card-text"><small class="text-muted update"></small></p>
+          </div>
+        </div>
+      </div>
+
+                    <!-- <hr class="my-4">
         <p class="lead">
             <!--action buttons-->
-            <a class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
+                    <!-- <a class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
             <a class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">Interactive Chart</a>
-        </p>
-    </div>
+        </p> -->
+                </div>
 
 
 </body>
