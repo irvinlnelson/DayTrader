@@ -79,10 +79,7 @@ $(document).ready(function () {
                 console.log(data);
              
                  $('#card1Comp').html(data.description);
-                // $('#industry').html(data.industry);
-                // $('#sector').html(data.sector);
-                // $('#corpDescription').html(data.description);
-                // $('#newsAbout').html(data.companyName);
+              
             },
             error: function (error) {
                 console.log("Error is " + error);
