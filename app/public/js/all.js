@@ -4,10 +4,15 @@ $(document).ready(function () {
 
 
     //https://api.iextrading.com/1.0/stock/aapl/quote   EXAMPLE
-     var IEXurl = "https://api.iextrading.com/1.0";
+    var IEXurl = "https://api.iextrading.com/1.0";
     //var myStock = $('#tickerSearch').val().trim();
     //var APIquote = IEXurl + "/stock/" + myStock + "/quote"
 
+    function getScore(arr) {
+        return arr.reduce(function (acc, cv) {
+            return acc + (cv.close - cv.open)
+        }, 0)
+    }
 
     //ON CLICK EVENT
 
@@ -24,8 +29,6 @@ $(document).ready(function () {
         IEXquote(myStock);
         IEXcomp(myStock);
         IEXchart(myStock);
-    
-
     });
 
     //API CALLS
@@ -40,22 +43,22 @@ $(document).ready(function () {
             success: function (data) {
 
                 console.log(data);
-                
+
                 var companyName = data.companyName;
                 console.log(companyName);
 
                 var latestPrice = (data.latestPrice).toFixed(2);
-                var changePercent = (data.changePercent*100).toFixed(2);
+                var changePercent = (data.changePercent * 100).toFixed(2);
 
-                 $('#card1Title').html(companyName).attr('name', companyName);
-                 $('#card1Detail').html(data.sector);
+                $('#card1Title').html(companyName).attr('name', companyName);
+                $('#card1Detail').html(data.sector);
 
-                 $('.update').text(data.latestTime);
+                $('.update').text(data.latestTime);
 
-                 $('#card2Title').html("$" + latestPrice).attr('price', latestPrice);
-                 $('#card3Title').html("Today's Change: " + changePercent + "%").attr('change', changePercent);
-            
-                 if (changePercent > 0) {
+                $('#card2Title').html("$" + latestPrice).attr('price', latestPrice);
+                $('#card3Title').html("Today's Change: " + changePercent + "%").attr('change', changePercent);
+
+                if (changePercent > 0) {
                     $('.price').css('color', 'green');
                 } else {
                     $('.price').css('color', 'red');
@@ -77,9 +80,9 @@ $(document).ready(function () {
             success: function (data) {
 
                 console.log(data);
-             
-                 $('#card1Comp').html(data.description);
-              
+
+                $('#card1Comp').html(data.description);
+
             },
             error: function (error) {
                 console.log("Error is " + error);
@@ -89,7 +92,6 @@ $(document).ready(function () {
 
     //TO GET DT SCORE
     function IEXchart(myStock) {
-
         $.ajax({
             url: IEXurl + "/stock/" + myStock + "/chart/3m",
             method: 'GET',
@@ -97,30 +99,15 @@ $(document).ready(function () {
 
                 // console.log(data);
                 // console.log("call was FIRED");
-                console.log(data[1].open);
+                console.log(data);
 
-               
-
-                for (i = 0; i < data.length; i++) {
-
-                    var dtScore =  (data[i].close - data[i].open).toFixed(2);
-
-
-                }
-             
-                  $('.dtScore').html(dtScore);
-                
+                console.log(getScore(data)/data.length);
+                $('.dtScore').html((getScore(data) / data.length*100).toFixed(2))
             },
+
             error: function (error) {
                 console.log("Error is " + error);
-            },
+            }
         });
-    }
-
-
-
-
-
-
-
-});
+    };
+})
