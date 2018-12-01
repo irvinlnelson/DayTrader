@@ -25,7 +25,7 @@ $(document).ready(function () {
         // CLEAR USER INPUT
         $('#tickerSearch').val('');
 
-        // MAKE ALL THE API CALLS
+        // MAKE ALL THE API CALLS - ALL FUNCTION CALLS ARE HERE
         IEXquote(myStock);
         IEXcomp(myStock);
         IEXchart(myStock);
