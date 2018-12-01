@@ -20,3 +20,5 @@ var sequelize = new Sequelize("users_db", "root", "root", {
 
 // Exports the connection for other files to use
 module.exports = sequelize;
+
+//comment
