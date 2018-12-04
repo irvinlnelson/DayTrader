@@ -19,11 +19,7 @@ module.exports = function(app) {
             }).then(function(result){
                 return res.json(result)
             });
-        } else {
-            User.findAll().then(function(result){
-                return res.json(result)
-            });
-        }
+        } 
     });
 
 // If a user sends data to add a new user...

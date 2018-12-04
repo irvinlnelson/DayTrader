@@ -20,7 +20,7 @@ module.exports = function(app) {
 // new route loads the index.html page,
   // where users can enter new users to the db
 app.get("/new", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
+  res.sendFile(path.join(__dirname, "../public/signUp.html"));
 });
 
  // all route loads the users stocks,
