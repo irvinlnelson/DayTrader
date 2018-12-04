@@ -154,19 +154,19 @@
 </head>
 
 <body>
-        <div class="topnav">
-                <div class="login-container">
-                  <form action="signUp.html">
-                    <input id="login-username" type="text" placeholder="Username" name="username">
-                    <input id="login-password" type="text" placeholder="Password" name="psw">
-                    <button id="login-submit" type="submit">Login</button>
-                    <button href="signUp.html" type="submit">Sign Up</button>
-                  </form>
-                </div>
-              </div>
-   
+    <div class="topnav">
+        <div class="login-container">
+            <form action="signUp.html">
+                <input id="login-username" type="text" placeholder="Username" name="username">
+                <input id="login-password" type="text" placeholder="Password" name="psw">
+                <button id="login-submit" type="submit">Login</button>
+                <button href="signUp.html" type="submit">Sign Up</button>
+            </form>
         </div>
-        <!-- <a class="navbar-brand" style="color: white; margin-left: 975px" href="#"></a>
+    </div>
+
+    </div>
+    <!-- <a class="navbar-brand" style="color: white; margin-left: 975px" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -222,7 +222,9 @@
             <div class="card-body">
                 <h3 class="card-title price" id="card3Title"></h3>
                 <p class="card-text"></p>
-                <p class="card-text"><small class="text-muted update"></small></p>
+                <p class="card-text">
+                    <small class="text-muted update"></small>
+                </p>
 
                 <table class="table">
                     <caption>Your Watchlist</caption>
@@ -234,11 +236,11 @@
                             <!-- <th scope="col">Handle</th> -->
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="watchTable">
                         <tr>
                             <th id="userStock1" scope="row">AAPL</th>
                             <td id="card2Title">Thornton</td>
-                            <td="dtScore">Mark</td>
+                            <td id="dtScore">Mark</td>
                         </tr>
                         <tr>
                             <th id="userStock2" scope="row">AAPL</th>
@@ -252,6 +254,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <a id="watchBtn" class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
+                <input id="watchSearch" class="form-control mr-sm-2" name="query" type="text" placeholder="AAPL, IBM, FB etc.">    
+            </p>
 
             </div>
         </div>
