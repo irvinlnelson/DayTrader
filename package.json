@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "dependencies": {
-    "chart.js": "^2.7.3",
-    "express": "^4.16.4",
-    "mysql2": "^1.6.4",
-    "sequelize": "^4.41.2"
+  "directories": {
+    "test": "test"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -23,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/irvinlnelson/DayTrader/issues"
   },
-  "homepage": "https://github.com/irvinlnelson/DayTrader#readme"
+  "homepage": "https://github.com/irvinlnelson/DayTrader#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }

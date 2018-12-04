@@ -1,4 +1,7 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
@@ -123,6 +126,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <!-- Button to open the modal login form -->
         <button onclick="document.getElementById('id01').style.display='block'">Login</button>
@@ -148,13 +152,19 @@
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
+=======
+        <div class="topnav">
+                <div class="login-container">
+                  <form action="signUp.html">
+                    <input id="login-username" type="text" placeholder="Username" name="username">
+                    <input id="login-password" type="text" placeholder="Password" name="psw">
+                    <button id="login-submit" type="submit">Login</button>
+                    <button href="signUp.html" type="submit">Sign Up</button>
+                  </form>
+>>>>>>> 462644afa13cefb4767c6c66f4535d27f6d4915e
                 </div>
-
-                <!-- <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div> -->
-            </form>
+              </div>
+   
         </div>
         <!-- <a class="navbar-brand" style="color: white; margin-left: 975px" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -204,45 +214,45 @@
             </div>
         </div>
         <div class="card">
-          
-          <div class="card-body">
-            <h3 class="card-title price" id="card3Title"></h3>
-            <p class="card-text"></p>
-            <p class="card-text"><small class="text-muted update"></small></p>
-         
-            <table class="table">
+
+            <div class="card-body">
+                <h3 class="card-title price" id="card3Title"></h3>
+                <p class="card-text"></p>
+                <p class="card-text"><small class="text-muted update"></small></p>
+
+                <table class="table">
                     <caption>Your Watchlist</caption>
                     <thead>
-                      <tr>
-                        <th scope="col">Ticker</th>
-                        <th scope="col">Last Price</th>
-                        <th scope="col">Score</th>
-                        <!-- <th scope="col">Handle</th> -->
-                      </tr>
+                        <tr>
+                            <th scope="col">Ticker</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">Score</th>
+                            <!-- <th scope="col">Handle</th> -->
+                        </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">AAPL</th>
-                        <td>Mark</td>
-                        <td id="card2Title">Thornton</td>
-                        <!-- <td>@mdo</td> -->
-                      </tr>
-                      <tr>
-                        <th scope="row">IBM</th>
-                        <td>Jacob</td>
-                        <td id="card2Title">Thornton</td>
-                        <!-- <td>@fat</td> -->
-                      </tr>
-                      <tr>
-                        <th scope="row">FB</th>
-                        <td>Larry</td>
-                        <td id="card2Title">the Bird</td>
-                        <!-- <td>@twitter</td> -->
-                      </tr>
+                        <tr>
+                            <th scope="row">AAPL</th>
+                            <td>Mark</td>
+                            <td id="card2Title">Thornton</td>
+                            <!-- <td>@mdo</td> -->
+                        </tr>
+                        <tr>
+                            <th scope="row">IBM</th>
+                            <td>Jacob</td>
+                            <td id="card2Title">Thornton</td>
+                            <!-- <td>@fat</td> -->
+                        </tr>
+                        <tr>
+                            <th scope="row">FB</th>
+                            <td>Larry</td>
+                            <td id="card2Title">the Bird</td>
+                            <!-- <td>@twitter</td> -->
+                        </tr>
                     </tbody>
-                  </table>
-        
-        </div>
+                </table>
+
+            </div>
         </div>
     </div>
 
