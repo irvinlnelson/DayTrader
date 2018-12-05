@@ -34,7 +34,7 @@ var User = sequelize.define("users", {
     },
     stock2: {
         type: Sequelize.STRING,
-        allowNull: Sequelize.STRING
+        allowNull: true
     },
     stock2: {
         type: Sequelize.STRING,

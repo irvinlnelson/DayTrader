@@ -23,14 +23,17 @@ module.exports = function(app) {
     });
 
 // If a user sends data to add a new user...
-app.post("api/new", function(res, res){
+app.post("/api/new", function(req, res){
 // Take the request...
     var user = req.body;
 
     User.create({
         username: user.username,
         email: user.email,
-        password: user.password
+        password: user.password,
+        stock1: "",
+        stock2: "",
+        stock3: ""
     });
 
     res.status(204).end();
