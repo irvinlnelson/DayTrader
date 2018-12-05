@@ -26,11 +26,11 @@
 <body>
     <div class="topnav">
         <div class="login-container">
-            <form action="signUp.html">
-                <input id="login-username" type="text" placeholder="Username" name="username">
-                <input id="login-password" type="text" placeholder="Password" name="psw">
-                <button id="login-submit" type="submit">Login</button>
-                <button href="signUp.html" type="submit">Sign Up</button>
+            <form id="login-form" action="signUp.html">
+                <input id="username" type="text" placeholder="Username" name="username">
+                <input id="password" type="text" placeholder="Password" name="psw">
+                <button onclick="displayLogin()" id="login" type="button">Login</button>
+                <button type="submit">Sign Up</button>
             </form>
 
         </div>

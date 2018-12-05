@@ -15,7 +15,6 @@ var User = sequelize.define("users", {
         type: Sequelize.STRING,
         validate: {
             isEmail: true,
-            notNull: true,
             len: [1, 35]
         }
     },
@@ -36,14 +35,12 @@ var User = sequelize.define("users", {
         type: Sequelize.STRING,
         allowNull: true
     },
-    stock2: {
+    stock3: {
         type: Sequelize.STRING,
         allowNull: true
-    },
-    stock4: {
-        type: Sequelize.STRING,
-        allowNull: true,
     }
+    
+
 
 });
 
