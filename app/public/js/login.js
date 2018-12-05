@@ -1,9 +1,10 @@
-$("#login-submit").on("click", function(){
+function displayLogin () {
+    
     event.preventDefault();
 
     var user = {
-        username: $("#login-username").val().trim(),
-        password: $("#login-password").val().trim()
+        username: $("#username").val().trim(),
+        password: $("#password").val().trim()
     };
     console.log(user);
 
@@ -17,4 +18,4 @@ $("#login-submit").on("click", function(){
         }
     })
 
-})
+}

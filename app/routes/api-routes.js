@@ -10,11 +10,12 @@ var User = require("../models/model.js");
 // =============================================================
 module.exports = function(app) {
 // Search for Specific User (or all users) then provides JSON
-    app.get("/api/:users", function(req, res){
+    app.get("/api/:users?", function(req, res){
         if (req.params.users) {
             User.findOne({
                 where: {
-                    username: req.params.users
+                    username: req.params.users,
+                    password: req.password
                 }
             }).then(function(result){
                 return res.json(result)
