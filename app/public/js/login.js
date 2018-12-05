@@ -2,8 +2,8 @@ $("#login-submit").on("click", function(){
     event.preventDefault();
 
     var user = {
-        username: $("login-username").val().trim(),
-        password: $("login-password").val().trim()
+        username: $("#login-username").val().trim(),
+        password: $("#login-password").val().trim()
     };
     console.log(user);
 
@@ -11,7 +11,9 @@ $("#login-submit").on("click", function(){
         console.log(data);
         $("caption").empty();
         if(!data){
-            $("caption").html(data.name + "'s Watchlist")
+            $("caption").html(data.name + "'s Watchlist");
+        } else {
+            alert("Invalid username or password");
         }
     })
 
