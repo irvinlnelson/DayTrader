@@ -12,132 +12,18 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
     <script src="js/login.js"></script>
     <script src="js/all.js"></script>
     <html lang="en">
+    <link rel="stylesheet" type="text/css" href="./css/indexStyle.css">
+</head>
 
-    <style>
-
-        .topnav {
-            background-color: rgb(6, 11, 36);
-            padding-top: 5px;
-            padding-bottom: 7px;
-            padding-left: 720px;
-        }
-        #tickerBtn {
-            color: rgba(255, 72, 0, 0.87);
-        }
-        .jumbotron {
-            color: white;
-            background-image: url("https://www.theindianwire.com/wp-content/uploads/2018/10/Stock-Market.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 50vh;
-        }
-
-        .lead {
-
-            font-size: 150px;
-            font-family: 'IBM Plex Mono', monospace;
-        }
-
-        button {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-
-        /* The Modal (background) */
-
-        .container {
-            padding-top: 5px;
-            text-align: center;
-
-        }
-
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-            padding-top: 60px;
-        }
-
-        /* Modal Content/Box */
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5px auto;
-            /* 15% from the top and centered */
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button */
-
-        .close {
-            /* Position it in the top right corner outside of the modal */
-            position: absolute;
-            right: 25px;
-            top: 0;
-            color: #000;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        /* Close button on hover */
-
-        .close:hover,
-        .close:focus {
-            color: red;
-            cursor: pointer;
-        }
-
-        /* Add Zoom Animation */
-
-        .animate {
-            -webkit-animation: animatezoom 0.6s;
-            animation: animatezoom 0.6s
-        }
-
-        @-webkit-keyframes animatezoom {
-            from {
-                -webkit-transform: scale(0)
-            }
-            to {
-                -webkit-transform: scale(1)
-            }
-        }
-
-        @keyframes animatezoom {
-            from {
-                transform: scale(0)
-            }
-            to {
-                transform: scale(1)
-            }
-        }
-    </style>
-
-    
+<body>
     <div class="topnav">
         <div class="login-container">
             <form action="signUp.html">
@@ -148,8 +34,8 @@
             </form>
 
         </div>
-
     </div>
+
     <div class="jumbotron">
         <!--Search Bar-->
         <form class="form-inline justify-content-center" method="GET" action="">
@@ -200,7 +86,7 @@
                             <th scope="col">Ticker</th>
                             <th scope="col">Last Price</th>
                             <th scope="col">Score</th>
-                           
+
                         </tr>
                     </thead>
                     <tbody id="watchTable">
@@ -221,18 +107,19 @@
                         </tr>
                     </tbody>
                 </table>
-                <a id="watchBtn" class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
-                <input id="watchSearch" class="form-control mr-sm-2" name="query" type="text" placeholder="AAPL, IBM, FB etc.">    
-            </p>
+                <a id="watchBtn" class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to
+                    Watchlist</a>
+                <input id="watchSearch" class="form-control mr-sm-2" name="query" type="text" placeholder="AAPL, IBM, FB etc.">
+                </p>
 
             </div>
         </div>
     </div>
 
     <hr class="my-4">
-        <p class="lead">
-            <!--action buttons-->
-    <!-- <a class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
+    <p class="lead">
+        <!--action buttons-->
+        <!-- <a class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
             <a class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">Interactive Chart</a>
         </p>
     </div> -->
