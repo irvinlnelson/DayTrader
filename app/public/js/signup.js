@@ -12,7 +12,7 @@ function signUp () {
     console.log(newUser);
 
     //sends request to create a new user in the database
-    $.post("api/new", newUser)
+    $.post("/api/new", newUser)
         .then(function(data){
             console.log(data);
             $("<caption>").html(data.username + "'s Watchlist")
