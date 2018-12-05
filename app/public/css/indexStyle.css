@@ -1,0 +1,30 @@
+
+.topnav {
+    background-color: rgb(6, 11, 36);
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 720px;
+}
+#tickerBtn {
+    color: rgba(255, 72, 0, 0.87);
+}
+.jumbotron {
+    color: white;
+    background-image: url("https://www.theindianwire.com/wp-content/uploads/2018/10/Stock-Market.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.lead {
+
+    font-size: 150px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+button {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
