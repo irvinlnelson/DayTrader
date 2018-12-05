@@ -120,8 +120,8 @@ $(document).ready(function () {
                 // console.log("call was FIRED");
                 console.log(data);
 
-                console.log(getScore(data)/data.length);
-                $('.dtScore').html((getScore(data) / data.length*100).toFixed(2))
+                console.log(getScore(data) / data.length);
+                $('.dtScore').html((getScore(data) / data.length * 100).toFixed(2))
             },
 
             error: function (error) {
@@ -130,20 +130,32 @@ $(document).ready(function () {
         });
     };
 
-//WATCHLIST FUNCTIONS   
-    function watchStock(myStock) {
+    //WATCHLIST FUNCTIONS   
+    function watchStock(userStock) {
+
+
+
+     
         $.ajax({
-            url: IEXurl + "/stock/" + myStock + "/chart/3m",
+            url: IEXurl + "/stock/" + userStock + "/chart/3m",
             method: 'GET',
             success: function (data) {
+                //var userStock = $('#watchSearch').val().trim();
+                 var rowVar1 = (data[64].open).toFixed(2);
+                var rowVar2 = (data[64].close).toFixed(2);
 
+                // var rowVar3 = ((getScore(data) / data.length * 100).toFixed(2));
                 // console.log(data);
                 // console.log("call was FIRED");
                 console.log("WATCHLIST BUTTON FIRED");
+                //console.log(userStock);
+                console.log(data);
 
-                console.log(getScore(data)/data.length);
-                $('#dtScore').html((getScore(data) / data.length*100).toFixed(2))
+
+                $('#watchTable').append("<tr><th>"+userStock+"</th><td>"+"$"+rowVar1+"</td><td>"+"$"+rowVar2+"</td></tr>");
             },
+
+        
 
             error: function (error) {
                 console.log("Error is " + error);
