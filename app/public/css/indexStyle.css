@@ -3,10 +3,30 @@
     background-color: rgb(6, 11, 36);
     padding-top: 5px;
     padding-bottom: 7px;
-    padding-left: 720px;
+    padding-right: 7px;
+    /* padding-left: 65%; */
+    text-align: right;
 }
 #tickerBtn {
-    color: rgba(255, 72, 0, 0.87);
+     color: yellow; 
+
+}
+
+#watchSearch, #watchBtn {
+
+margin: 7px;
+
+}
+
+/* #watchSearch, #watchBtn {
+
+    margin: 7px;
+    
+    } */
+
+#tickerBtn:hover {
+    color: white; 
+
 }
 .jumbotron {
     color: white;
@@ -26,5 +46,6 @@
 button {
     font-family: 'IBM Plex Mono', monospace;
 }
+
 
 
