@@ -3,10 +3,17 @@
     background-color: rgb(6, 11, 36);
     padding-top: 5px;
     padding-bottom: 7px;
-    padding-left: 720px;
+    padding-left: 65%;
 }
 #tickerBtn {
-    color: rgba(255, 72, 0, 0.87);
+     color: yellow; 
+
+}
+
+
+#tickerBtn:hover {
+    color: white; 
+
 }
 .jumbotron {
     color: white;
