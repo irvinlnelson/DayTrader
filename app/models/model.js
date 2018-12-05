@@ -27,7 +27,24 @@ var User = sequelize.define("users", {
             len: [1, 18],
             is: ["^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})", "i"]
         }
+    },
+    stock1: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    stock2: {
+        type: Sequelize.STRING,
+        allowNull: Sequelize.STRING
+    },
+    stock2: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    stock4: {
+        type: Sequelize.STRING,
+        allowNull: true,
     }
+
 });
 
 

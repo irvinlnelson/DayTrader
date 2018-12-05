@@ -17,5 +17,16 @@ module.exports = function(app) {
  app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
+// new route loads the index.html page,
+  // where users can enter new users to the db
+app.get("/new", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/signUp.html"));
+});
+
+ // all route loads the users stocks,
+  // where all users in the db are displayed
+  app.get("/all", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+  });
 
 }
