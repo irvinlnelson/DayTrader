@@ -18,6 +18,7 @@ $(document).ready(function () {
 
     $('#tickerBtn').on('click', function () {
         event.preventDefault();
+        
 
         // GET USER INPUT
         var myStock = $('#tickerSearch').val().trim();
