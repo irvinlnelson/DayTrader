@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="google" content="notranslate">
@@ -9,13 +12,13 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
     <script src="js/login.js"></script>
     <script src="js/all.js"></script>
+    <html lang="en">
 
     <style>
         .jumbotron {
@@ -32,72 +35,96 @@
             font-size: 150px;
             font-family: 'IBM Plex Mono', monospace;
         }
+
         button {
-            font-family: 'IBM Plex Mono', monospace;   
+            font-family: 'IBM Plex Mono', monospace;
         }
 
         /* The Modal (background) */
-.container {
-    padding-top: 5px;
-    text-align: center;
-    
-}
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
 
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
+        .container {
+            padding-top: 5px;
+            text-align: center;
 
-/* The Close Button */
-.close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0; 
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
+        }
 
-/* Close button on hover */
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
 
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
+        /* Modal Content/Box */
 
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5px auto;
+            /* 15% from the top and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
 
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
+        /* The Close Button */
 
+        .close {
+            /* Position it in the top right corner outside of the modal */
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        /* Close button on hover */
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
     </style>
 
     <!--Fluid Jumbotron-->
@@ -105,12 +132,14 @@
         // Get the modal
         var modal = document.getElementById('id01');
 
+
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+
         // $(".jumbotron").css({ height: $(window).height() + "px" });
 
         // $(window).on("resize", function () {
@@ -126,7 +155,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
+
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <!-- Button to open the modal login form -->
         <button onclick="document.getElementById('id01').style.display='block'">Login</button>
@@ -165,8 +194,21 @@
                 </div>
               </div>
    
+=======
+    <div class="topnav">
+        <div class="login-container">
+            <form action="signUp.html">
+                <input id="login-username" type="text" placeholder="Username" name="username">
+                <input id="login-password" type="text" placeholder="Password" name="psw">
+                <button id="login-submit" type="submit">Login</button>
+                <button href="signUp.html" type="submit">Sign Up</button>
+            </form>
+>>>>>>> 1211503d70c55859d2d2df95e83b462c763ecab3
         </div>
-        <!-- <a class="navbar-brand" style="color: white; margin-left: 975px" href="#"></a>
+    </div>
+
+    </div>
+    <!-- <a class="navbar-brand" style="color: white; margin-left: 975px" href="#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -201,7 +243,9 @@
                 <h3 class="card-title" id="card1Title"></h3>
                 <p class="card-text" id="card1Detail"></p>
                 <p class="card-text" id="card1Comp"></p>
-                <p class="card-text"><small class="text-muted update"></small></p>
+                <p class="card-text">
+                    <small class="text-muted update"></small>
+                </p>
             </div>
         </div>
         <div class="card">
@@ -209,8 +253,10 @@
             <div class="card-body">
                 <h1 class="card-title price" id="card2Title"></h1>
                 <p class="card-text">Daytrader, LLC.&trade; score: </p>
-                <h1 class="dtScore">65</h1>
-                <p class="card-text"><small class="text-muted update"></small></p>
+                <h1 class="dtScore"> </h1>
+                <p class="card-text">
+                    <small class="text-muted update"></small>
+                </p>
             </div>
         </div>
         <div class="card">
@@ -218,7 +264,9 @@
             <div class="card-body">
                 <h3 class="card-title price" id="card3Title"></h3>
                 <p class="card-text"></p>
-                <p class="card-text"><small class="text-muted update"></small></p>
+                <p class="card-text">
+                    <small class="text-muted update"></small>
+                </p>
 
                 <table class="table">
                     <caption>Your Watchlist</caption>
@@ -230,27 +278,27 @@
                             <!-- <th scope="col">Handle</th> -->
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="watchTable">
                         <tr>
-                            <th scope="row">AAPL</th>
-                            <td>Mark</td>
+                            <th id="userStock1" scope="row">AAPL</th>
                             <td id="card2Title">Thornton</td>
-                            <!-- <td>@mdo</td> -->
+                            <td id="dtScore">Mark</td>
                         </tr>
                         <tr>
-                            <th scope="row">IBM</th>
-                            <td>Jacob</td>
+                            <th id="userStock2" scope="row">AAPL</th>
                             <td id="card2Title">Thornton</td>
-                            <!-- <td>@fat</td> -->
+                            <td id="dtScore">Jacob</td>
                         </tr>
                         <tr>
-                            <th scope="row">FB</th>
-                            <td>Larry</td>
+                            <th id="userStock3" scope="row">AAPL</th>
                             <td id="card2Title">the Bird</td>
-                            <!-- <td>@twitter</td> -->
+                            <td id="dtScore">Larry</td>
                         </tr>
                     </tbody>
                 </table>
+                <a id="watchBtn" class="btn btn-primary btn-md learn_more_buttons mr-sm-2" href="" role="button">add to Watchlist</a>
+                <input id="watchSearch" class="form-control mr-sm-2" name="query" type="text" placeholder="AAPL, IBM, FB etc.">    
+            </p>
 
             </div>
         </div>
@@ -266,3 +314,5 @@
 
 
 </body>
+
+</html>

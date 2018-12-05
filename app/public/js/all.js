@@ -31,6 +31,25 @@ $(document).ready(function () {
         IEXchart(myStock);
     });
 
+    //WATCHLIST ON CLICK EVENT
+    $('#watchBtn').on('click', function () {
+        event.preventDefault();
+
+        console.log("Watchlist Fired!!!");
+
+        // GET USER INPUT
+        var userStock = $('#watchSearch').val().trim();
+
+        // CLEAR USER INPUT
+        $('#watchSearch').val('');
+
+        // MAKE ALL THE API CALLS - ALL FUNCTION CALLS ARE HERE
+        // IEXquote(myStock);
+        // IEXcomp(myStock);
+        // IEXchart(myStock);
+        watchStock(userStock);
+    });
+
     //API CALLS
     //--------------------------------------------------
 
@@ -103,6 +122,27 @@ $(document).ready(function () {
 
                 console.log(getScore(data)/data.length);
                 $('.dtScore').html((getScore(data) / data.length*100).toFixed(2))
+            },
+
+            error: function (error) {
+                console.log("Error is " + error);
+            }
+        });
+    };
+
+//WATCHLIST FUNCTIONS   
+    function watchStock(myStock) {
+        $.ajax({
+            url: IEXurl + "/stock/" + myStock + "/chart/3m",
+            method: 'GET',
+            success: function (data) {
+
+                // console.log(data);
+                // console.log("call was FIRED");
+                console.log("WATCHLIST BUTTON FIRED");
+
+                console.log(getScore(data)/data.length);
+                $('#dtScore').html((getScore(data) / data.length*100).toFixed(2))
             },
 
             error: function (error) {
