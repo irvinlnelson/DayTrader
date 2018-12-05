@@ -1,15 +1,29 @@
+h1 {
+    color: white;
+}
 
+p {
+    color: white;
+}
+
+b {
+    color: white;
+}
+
+label {
+    color: white;
+}
 #cancelBtn {
-        background-color: rgba(255, 0, 0, 0.411);
+        background-color: rgba(207, 0, 0, 0.767);
         font-size: 17px;
     }
 #signUpBtn {
-        background-color: rgba(0, 128, 0, 0.493);
+        background-color: rgba(0, 128, 0, 0.877);
         font-size: 17px;
     }
 body {
         font-family: "IBM PLEX MONO", monospace;
-        background-color: rgb(234, 237, 245); 
+        background-color: #022e42; 
         }
 * {box-sizing: border-box}
 
@@ -64,7 +78,7 @@ button:hover {
 /* Add padding to container elements */
 .container {
     padding: 16px;
-    background-color: #b6d4e2;
+    background-color: #022e42;
 }
 
 /* Clear floats */
